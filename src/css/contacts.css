@@ -39,14 +39,33 @@
     margin-top: 12px;
 }
 
-.last-title-h3{
-    font-size: 26px;
+/* Базовые стили для всех SVG */
+.social-btn svg {
+    color: white;
+    /* Устанавливаем цвет через currentColor */
+    fill: currentColor;
+    /* Для иконок с fill */
+    transition: all 0.3s ease;
 }
 
+/* Специально для Viber и Telegram, если нужно */
+.social-btn.viber svg,
+.social-btn.telegram svg {
+    fill: currentColor;
+    /* Убеждаемся, что они тоже используют currentColor */
+}
+
+/* Стили при ховере и фокусе для ВСЕХ иконок */
 .social-btn:hover svg,
 .social-btn:focus svg {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+    filter: drop-shadow(0 0 8px rgba(198, 21, 44, 0.25));
+    fill: currentColor;
+    /* Наследуем цвет */
+}
+
+.last-title-h3{
+    font-size: 26px;
 }
 
  @media (max-width: 950px){

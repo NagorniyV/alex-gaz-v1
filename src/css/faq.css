@@ -33,11 +33,11 @@
      cursor: pointer;
      font-weight: 600;
      font-size: 1.1rem;
-        background: linear-gradient(90deg, #0d253b, #f81a37);
+    background: linear-gradient(90deg, #0d253b, #f81a37);
     }
     
-    .faq-question:hover {
-        background: linear-gradient(90deg, #0d253b 50%, #f81a37 100%);
+.faq-question:hover {
+    background: linear-gradient(90deg, #0d253b 50%, #f81a37 100%);
     }
 
  .faq-question span{
