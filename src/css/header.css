@@ -7,7 +7,15 @@
   color: #f3f3f3;
 }
 
+.header a{
+  color: #f3f3f3;
+  font-weight: 500;
+  font-size: 18px;
+}
 
+.navigation a{
+    font-weight: 600;
+}
 
 /* Основной логотип (для мобильной версии) */
 .logo-div {
@@ -51,11 +59,11 @@
   gap: 36px;
 }
 
-.phones-column,
-.phone-link {
+.phones-column {
   display: flex;
   flex-direction: column;
   gap: 8px;
+
 }
 
 .nav-link {
