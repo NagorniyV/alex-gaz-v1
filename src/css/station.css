@@ -66,16 +66,17 @@
     padding: 14px 70px;
 }
 
-.our-servise {
+.our-servise, .geo-alex-gaz {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
     align-items: center;
 }
 
-.our-servise>div {
+.our-servise>div, .geo-alex-gaz>div {
     flex: 1;
     min-height: 100px;
+
 }
 
 .our-servise-list li{
@@ -90,6 +91,48 @@
 
 .our-servise-list li p {
     font-size: 18px;
+}
+
+.geo-location{
+    margin-top: 30px;
+}
+
+.geo-location p{
+    text-align: center;
+    margin: 12px auto;
+    font-size: 22px;
+}
+
+.geo-alex-gaz{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.geo-alex-gaz-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.geo-alex-gaz-img img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.cities-list{
+    font-size: 24px;
 }
 
 /* Адаптивність */
@@ -125,6 +168,9 @@
     .station-title{
     font-size: 36px;
     text-align: center;
+}
 
+.geo-alex-gaz-img {
+    display: none;
 }
 }

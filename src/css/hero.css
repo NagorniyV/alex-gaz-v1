@@ -4,6 +4,8 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    min-height: 100dvh;
+    min-height: 100vh;
 }
 
 /* mobile */
@@ -16,11 +18,15 @@
 .hero-title{
     color: #f3f3f3;
     margin-top: 200px;
-    font-size: 46px;
+    font-size: 42px;
+}
+
+.hero h2{
+    font-size: 22px;
 }
 
 .hero-content{
-    font-size: 28px;
+    font-size: 26px;
     color: #f3f3f3;
 }
 
@@ -89,7 +95,6 @@
 .hero-icon-container{
     display: flex;
     justify-content: space-between;
-    /* margin-top: auto; */
 }
 
 .hero-icon-container > div{
@@ -97,14 +102,10 @@
     align-items: center;
     gap: 18px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media (max-width: 680px){
-.hero{
-        min-height: 100vh;
-}
-
     .hero-icon-container p{
         display: none;
     }
