@@ -8,18 +8,18 @@
 
 .otzivy-title, .brend-title{
     color: #f3f3f3;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
        
 .reviews-container {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 28px;
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
 }
         
 .review-card {
-
     background: white;
     border-radius: 12px;
     padding: 25px;
@@ -47,12 +47,13 @@
     padding-left: 10px;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: flex-end;
 }
         
 .client-image {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -61,27 +62,26 @@
 }
         
 .client-name {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     margin-bottom: 8px;
-    color: #2c3e50;
+    color: #121212;
     text-align: center;
 }
         
-        .review-date {
-            font-size: 14px;
-            color: #7f8c8d;
-            margin-bottom: 12px;
-            text-align: center;
-        }
+.review-date {
+    font-size: 10px;
+    color: #121212;
+    margin-bottom: 12px;
+    text-align: center;
+}
         
-        .review-text {
-            color: #34495e;
-            line-height: 1.6;
-            overflow: hidden;
-            font-size: 18px;
-            font-weight: 600;
-        }
+.review-text {
+    color: #121212;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+}
         
         @media (max-width: 1050px) {
             .reviews-container{

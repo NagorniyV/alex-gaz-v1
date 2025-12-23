@@ -57,20 +57,20 @@
 .nav-link {
   display: flex;
   gap: 36px;
+  color: #f3f3f3;
 }
 
 .phones-column {
   display: flex;
   flex-direction: column;
   gap: 8px;
-
 }
 
 .nav-link {
   position: relative;
   text-decoration: none;
   padding-bottom: 5px;
-  color: #f3f3f3;
+
 }
 
 .nav-link::after {

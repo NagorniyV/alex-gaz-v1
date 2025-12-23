@@ -5,8 +5,12 @@
     max-width: 320px;
 }
 
-.footer-card>h3 {
+.footer-card>h2 {
+    font-size: 24px;
     color: #ff2340;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
 .footer>.container {
@@ -27,9 +31,8 @@
     min-height: 0;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
-    /* Добавлено для полной ширины */
 }
 
 .contacts-map img {
@@ -59,11 +62,8 @@
 }
 
 .footer-card h3 {
-    font-size: 24px;
-    color: #ff2340;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .footer-card>p {
@@ -76,9 +76,8 @@
 }
 
 .footer-list li {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f1f1f1;
+    margin: 20px auto;
+    /* padding-bottom: 20px; */
 }
 
 .footer-list li:last-child {
