@@ -9,8 +9,13 @@
 .otzivy-title, .brend-title{
     color: #f3f3f3;
     margin-bottom: 50px;
+    font-size: 42px;
+    text-align: center;
 }
 
+.station-title>span {
+    color: #f81a37;
+}
        
 .reviews-container {
 display: grid;
