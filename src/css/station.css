@@ -85,9 +85,6 @@
     gap: 12px;
 }
 
-.our-servise-list{
-    margin: auto 0px auto;
-}
 
 .our-servise-list li p {
     font-size: 18px;
@@ -145,10 +142,6 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
         padding: 1rem;
-    }
-
-    .station-card-container>div {
-        /* padding: 1.2rem; */
     }
 
     .station-card-container h3 {
