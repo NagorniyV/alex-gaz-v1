@@ -65,74 +65,77 @@
     padding: 14px 70px;
 }
 
-.our-servise, .geo-alex-gaz {
-    display: flex;
-    gap: 40px;
-    width: 100%;
-    align-items: center;
-    margin: 30px auto;
-}
-
-.our-servise>div, .geo-alex-gaz>div {
-    /* flex: 1; */
-    min-height: 100px;
-    margin: 0px auto;
-}
-
-.our-servise-hodovaya-img{
-    min-width: 40%;
-}
-
-.our-servise-list li{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-
-.our-servise-list li p {
-    font-size: 18px;
-}
-
-.geo-location{
-    margin-top: 30px;
-}
-
-.geo-location p{
-    text-align: center;
-    margin: 12px auto;
-    font-size: 22px;
-}
-
-.geo-alex-gaz{
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.geo-alex-gaz-img {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.our-servise {
+    position: relative;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.geo-alex-gaz-img img {
+    /* Важно для очистки float */
+    margin: 30px auto;
     width: 100%;
-    height: 100%;
-    max-height: 220px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 15px;
-    transition: transform 0.3s ease;
 }
 
-.cities-list{
-    font-size: 24px;
+/* Картинка с float */
+.our-servise-hodovaya-img {
+    float: right;
+    width: 40%;
+    max-width: 500px;
+    margin: 0 0 20px 30px;
+    /* top right bottom left */
+    border-radius: 10px;
+    overflow: hidden;
+    shape-outside: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    shape-margin: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.our-servise-hodovaya-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
+}
+
+.our-servise-hodovaya-img img:hover {
+    transform: scale(1.03);
+}
+
+/* Текстовый контент */
+.our-servise-content {
+    overflow: hidden;
+    /* Очистка float */
+}
+
+/* Первые несколько элементов обтекают картинку */
+.our-servise-content .station-content,
+.our-servise-content p:first-of-type,
+.our-servise-content p:nth-of-type(2) {
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+/* Блоки, которые должны идти ПОД картинкой */
+.our-servise-content h3:first-of-type,
+.problems-grid,
+.our-servise-content h3:nth-of-type(2),
+.parts-grid,
+.seo-conclusion {
+    clear: both;
+    /* Ключевое свойство - очищает float */
+    margin-top: 30px;
+}
+
+.our-servise-content-div p{
+    margin: 8px 0px;
+    text-indent: 20px;
+}
+
+.station h3{
+    font-size: 20px;
+}
+
+.station h4{
+    font-size: 18px;
 }
 
 .station-content{

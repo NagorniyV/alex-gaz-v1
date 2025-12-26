@@ -1,0 +1,16 @@
+/* Sections style */
+@import url('./css/reset.css');
+@import url('./css/container.css');
+@import url('./css/header.css');
+@import url('./css/hero.css');
+@import url('./css/footer.css');
+@import url('./css/otzivy.css');
+@import url('./css/callback.css');
+@import url('./css/modal-window.css');
+@import url('./css/contacts.css');
+@import url('./css/station.css');
+
+
+.hero-to {
+    background-image: url(./img/tehobslugivanie-hero-bg.webp);
+}
