@@ -1,7 +1,6 @@
 .station-title{
     font-size: 38px;
     text-align: center;
-
 }
 
 .station-title > span{
@@ -75,8 +74,13 @@
 }
 
 .our-servise>div, .geo-alex-gaz>div {
-    flex: 1;
+    /* flex: 1; */
     min-height: 100px;
+    margin: 0px auto;
+}
+
+.our-servise-hodovaya-img{
+    min-width: 40%;
 }
 
 .our-servise-list li{
@@ -157,13 +161,17 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     .station-card-container {
-        gap: 1rem;
+        gap: 50px;
     }
 
     .station-card-container>div {
         padding: 1rem;
+    }
+
+    .station-card-container{
+        margin-bottom: 20px;
     }
 
     .cities-list {

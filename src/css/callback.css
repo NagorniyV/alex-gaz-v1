@@ -1,10 +1,16 @@
 .callback-container{
     display: flex;
     align-items: center;
+    margin: 0px auto;
 }
 
 .callback-container > div:first-child{
     width: 50%;
+}
+
+.callback-container img{
+    max-height: 350px;
+    margin-left: auto;
 }
 
 .callback-title {
@@ -56,17 +62,7 @@
     width: 100%;
 }
 
-/* .callback-btn {
-    margin-left: auto;
-    margin-right: 0px;
-} */
-
-         /* .callback-btn{
-            width: 100%;
-        } */
-
-
-@media (max-width: 440px) {
+@media (max-width: 720px) {
     .discount-subtitle {
         font-size: 16px;
         text-align: center;

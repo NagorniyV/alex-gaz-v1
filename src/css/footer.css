@@ -2,7 +2,7 @@
     border-radius: 10px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     padding: 14px 18px;
-    max-width: 320px;
+    width: 700px;
 }
 
 .footer-card>h2 {
@@ -121,7 +121,7 @@
     }
 
     .footer-card {
-        max-width: none;
+        width: auto;
     }
 
     .footer-card h2{

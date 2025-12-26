@@ -19,3 +19,57 @@
     margin: 12px 0px;
 }
 
+.diagnostica-hodovoy{
+    color: #f3f3f3;
+    position: relative;
+    background-image: url(./img/backgraund.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.diagnostics-div {
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.diagnostics-img {
+    float: left;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 30px 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.diagnostics-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.diagnostics-content p{
+    margin: 8px 0px;
+    text-indent: 30px;
+}
+
+.diagnostics-content h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+@media (max-width: 768px){
+    .diagnostics-div{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .diagnostics-img {
+        float: none;
+        width: 100%;
+    }
+    
+}
