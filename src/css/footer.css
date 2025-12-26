@@ -122,9 +122,10 @@
 
     .footer-card {
         max-width: none;
-        /* Убираем ограничение ширины */
-        /* width: 100%; */
-        /* Занимает всю доступную ширину */
+    }
+
+    .footer-card h2{
+        font-size: 30px;
     }
 
     .contacts-map>div {
@@ -147,4 +148,6 @@
     .contacts-map {
     height: 400px;
     }
+
+
 }

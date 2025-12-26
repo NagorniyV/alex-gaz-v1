@@ -202,9 +202,3 @@
     }
 }
 
-
-@media (max-width: 1100px){
-    .hero-icon-container{
-        display: none;
-    }  
-}

@@ -17,12 +17,13 @@
 
 .hero-title{
     color: #f3f3f3;
-    margin-top: 200px;
+    margin-top: 30vh;
     font-size: 32px;
 }
 
 .hero h2{
     font-size: 20px;
+    margin-top: 5vh;
 }
 
 .hero-content{
@@ -49,7 +50,7 @@
     font-weight: 700;
     padding: 12px 35px;
     border-radius: 25px;
-    margin-top: 16px;
+    margin-top: 5vh;
     display: block;
     margin-right: auto;
     border: none;
@@ -100,9 +101,10 @@
 .hero-icon-container > div{
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 10px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: auto;
 }
 
 @media (max-width: 680px){
@@ -118,8 +120,10 @@
 
 @media only screen and (max-width: 440px) {
     .hero-title {
-        margin-top: 100px;
-        font-size: 26px;
+        margin-top: 20vh;
+        font-size: 30px;
+        /* background: rgba(0, 0, 0, 0.15); */
+        /* backdrop-filter: blur(5px); */
     }
 
     .hero-content {
@@ -131,3 +135,8 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .hero-icon-container {
+        display: none;
+    }
+}
