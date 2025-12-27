@@ -136,8 +136,9 @@
     .hero-icon-container {
         display: flex;
         flex-wrap: nowrap;
-        gap: 1px;
+        justify-content: space-between;
         padding: 0px;
+        gap: 0;
     }
 
     .hero-icon-container>div {
