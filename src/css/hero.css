@@ -133,7 +133,21 @@
 }
 
 @media (max-width: 480px) {
+    .hero-icon-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1px;
+        padding: 0px;
+    }
+
     .hero-icon-container>div {
+        display: flex;
+        grid-template-columns: unset;
+        min-width: auto;
+        padding: 0px;
+    }
+
+    .advantage-content {
         display: none;
     }
 
@@ -144,5 +158,9 @@
         
     .hero-content {
         font-size: 20px;
+    }
+
+    .hero h2 {
+        display: none;
     }
 }
