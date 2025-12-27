@@ -124,7 +124,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  /* width: 90%; */
   height: 100vh;
   z-index: 1000;
   padding: 80px 20px 20px;
@@ -153,13 +153,13 @@
 
 .mobile-header-colum .nav-link,
 .mobile-header-colum .phone-link-mobile {
-  font-size: 28px;
+  /* font-size: 28px; */
   border: 2px solid #7c5b6d;
-  padding: 10px 40px;
+  /* padding: 10px 40px; */
   border-radius: 10px;
   background: linear-gradient(135deg, #f5f0f4 0%, #e8dde5 50%, #dbc9d6 100%);
   color: #101010;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* Медиа запросы для мобильной версии */
