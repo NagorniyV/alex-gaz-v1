@@ -1,0 +1,84 @@
+.brend-section {
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    background-image: url(../img/backgraund.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.brend-section h2{
+    color: #f3f3f3;
+}
+
+.infinite-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0px;
+    margin-top: 40px;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.carousel-track img {
+    width: 225px;
+    height: 120px;
+    object-fit: contain;
+    flex-shrink: 0;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+    transform: scale(1.1);
+}
+
+.text-brend {
+    color: #f3f3f3;
+    text-align: center;
+    font-size: 18px;
+    max-width: 180px;
+    margin: 14px auto 0px;
+
+}
+
+/* Анимация */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 15px));
+    }
+}
+
+/* Адаптация */
+@media (max-width: 992px) {
+    .carousel-track img {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-track {
+        gap: 20px;
+        animation-duration: 30s;
+    }
+
+    .carousel-track img {
+        width: 200px;
+        height: 100px;
+    }
+}

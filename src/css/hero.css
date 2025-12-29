@@ -8,6 +8,10 @@
     min-height: 100vh;
 }
 
+.hero-gbo{
+        background-image: url(../img/vstanovlenya-gbo-bucha.webp);
+}
+
 /* mobile */
 @media (max-width: 480px) {
     .hero {

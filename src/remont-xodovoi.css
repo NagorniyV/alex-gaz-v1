@@ -9,6 +9,7 @@
 @import url('./css/modal-window.css');
 @import url('./css/contacts.css');
 @import url('./css/station.css');
+@import url('./css/avto-logo.css');
 
 
 .hero-hodovaja{
@@ -19,20 +20,7 @@
     margin: 12px 0px;
 }
 
-.diagnostica-hodovoy{
-    color: #f3f3f3;
-    position: relative;
-    background-image: url(./img/backgraund.webp);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
 
-.diagnostics-div {
-    position: relative;
-    overflow: hidden;
-    margin: 40px 0;
-}
 
 .diagnostics-img {
     float: left;

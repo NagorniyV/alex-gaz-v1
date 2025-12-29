@@ -317,3 +317,196 @@ function sendToTelegramAlternative(data) {
         }
     });
 }
+
+//BREND SECTION
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.carousel-track');
+    const items = track.querySelectorAll('div'); // Выбираем все div-элементы, содержащие img и p
+    
+    // Клонируем все элементы (и изображения, и текст) для бесшовности
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      track.appendChild(clone);
+    });
+    
+    // Перезапуск анимации при скролле (опционально)
+    track.addEventListener('animationiteration', () => {
+      track.style.animation = 'none';
+      void track.offsetWidth; // Trigger reflow
+      track.style.animation = 'scroll 40s linear infinite';
+    });
+  });
+
+// Липкие кнопки (телефон и скролл вверх)// Липкие кнопки - телефон и скролл вверх
+window.initStickyButtons = function() {
+    console.log('🚀 Инициализация липких кнопок...');
+    
+    // Получаем элементы
+    const phoneBtn = document.getElementById('phoneButton');
+    const phonePanel = document.getElementById('phonePanel');
+    const scrollBtn = document.getElementById('scrollTopButton');
+    
+    // Проверяем, что элементы существуют
+    if (!phoneBtn || !phonePanel || !scrollBtn) {
+        console.error('❌ Не найдены элементы липких кнопок!');
+        return;
+    }
+    
+    console.log('✅ Все элементы найдены');
+    
+    // 1. КНОПКА ТЕЛЕФОНА
+    console.log('📱 Настройка кнопки телефона...');
+    
+    // Флаг для отслеживания состояния панели
+    let isPhonePanelOpen = false;
+    
+    // Клик по кнопке телефона
+    phoneBtn.addEventListener('click', function(e) {
+        e.stopPropagation(); // Останавливаем всплытие
+        
+        if (isPhonePanelOpen) {
+            // Закрываем панель
+            phonePanel.classList.remove('active');
+            isPhonePanelOpen = false;
+            console.log('📴 Панель телефона закрыта');
+        } else {
+            // Открываем панель
+            phonePanel.classList.add('active');
+            isPhonePanelOpen = true;
+            console.log('📞 Панель телефона открыта');
+            
+            // Автоматически закрываем через 5 секунд
+            setTimeout(() => {
+                if (isPhonePanelOpen) {
+                    phonePanel.classList.remove('active');
+                    isPhonePanelOpen = false;
+                    console.log('⏰ Панель телефона закрыта по таймауту');
+                }
+            }, 5000);
+        }
+    });
+    
+    // Закрытие панели при клике в любом другом месте
+    document.addEventListener('click', function(e) {
+        if (isPhonePanelOpen && 
+            !phonePanel.contains(e.target) && 
+            !phoneBtn.contains(e.target)) {
+            phonePanel.classList.remove('active');
+            isPhonePanelOpen = false;
+            console.log('🚪 Панель телефона закрыта (клик вне панели)');
+        }
+    });
+    
+    // 2. КНОПКА СКРОЛЛА ВВЕРХ
+    console.log('⬆️ Настройка кнопки скролла вверх...');
+    
+    // Находим секцию hero для расчета позиции
+    const heroSection = document.querySelector('.hero-section') || 
+                       document.querySelector('section:first-of-type') ||
+                       document.querySelector('header');
+    
+    let heroBottom = 0;
+    
+    if (heroSection) {
+        const heroRect = heroSection.getBoundingClientRect();
+        heroBottom = window.scrollY + heroRect.bottom;
+        console.log(`🎯 Секция hero найдена, нижняя граница: ${heroBottom}px`);
+    } else {
+        // Если нет hero секции, используем 300px от верха
+        heroBottom = 300;
+        console.log('⚠️ Секция hero не найдена, используем дефолтную позицию');
+    }
+    
+    // Целевая позиция для показа кнопки (heroBottom + 200px)
+    const scrollThreshold = heroBottom + 200;
+    console.log(`🎯 Кнопка появится при скролле > ${scrollThreshold}px`);
+    
+    // Функция показа/скрытия кнопки скролла
+    function updateScrollButton() {
+        const currentScroll = window.scrollY || document.documentElement.scrollTop;
+        
+        if (currentScroll > scrollThreshold) {
+            // Показываем кнопку
+            if (!scrollBtn.classList.contains('visible')) {
+                scrollBtn.classList.add('visible');
+                console.log(`⬆️ Показать кнопку (скролл: ${currentScroll}px)`);
+            }
+        } else {
+            // Скрываем кнопку
+            if (scrollBtn.classList.contains('visible')) {
+                scrollBtn.classList.remove('visible');
+                console.log(`⬇️ Скрыть кнопку (скролл: ${currentScroll}px)`);
+            }
+        }
+        
+        // Закрываем панель телефона при скролле
+        if (isPhonePanelOpen) {
+            phonePanel.classList.remove('active');
+            isPhonePanelOpen = false;
+            console.log('📴 Панель телефона закрыта при скролле');
+        }
+    }
+    
+    // Клик по кнопке скролла вверх
+    scrollBtn.addEventListener('click', function() {
+        console.log('🔼 Скролл наверх');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Закрываем панель телефона если открыта
+        if (isPhonePanelOpen) {
+            phonePanel.classList.remove('active');
+            isPhonePanelOpen = false;
+            console.log('📴 Панель телефона закрыта после скролла');
+        }
+    });
+    
+    // Инициализация при загрузке
+    updateScrollButton();
+    
+    // Слушаем событие скролла
+    window.addEventListener('scroll', updateScrollButton);
+    
+    // Обновляем позицию при ресайзе (на случай изменения размера hero)
+    window.addEventListener('resize', function() {
+        if (heroSection) {
+            const heroRect = heroSection.getBoundingClientRect();
+            heroBottom = window.scrollY + heroRect.bottom;
+            const newThreshold = heroBottom + 200;
+            console.log(`🔄 Обновлена позиция: ${newThreshold}px`);
+        }
+        updateScrollButton();
+    });
+    
+    console.log('🎉 Липкие кнопки успешно инициализированы!');
+    
+    // Возвращаем объект для отладки
+    return {
+        phoneBtn,
+        phonePanel,
+        scrollBtn,
+        isPhonePanelOpen: () => isPhonePanelOpen,
+        getScrollThreshold: () => scrollThreshold
+    };
+};
+
+// Автоматический запуск при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('📄 DOM полностью загружен');
+    
+    // Даем небольшую задержку для гарантированной загрузки всех элементов
+    setTimeout(() => {
+        if (typeof initStickyButtons === 'function') {
+            const stickyButtons = initStickyButtons();
+            console.log('🎯 Объект липких кнопок создан:', stickyButtons);
+            
+            // Добавляем в глобальную область для отладки
+            window.stickyButtons = stickyButtons;
+        } else {
+            console.error('❌ Функция initStickyButtons не найдена!');
+        }
+    }, 100);
+});

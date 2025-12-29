@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     margin: 0px auto;
+    max-width: 1100px;
+    gap: 40px;
 }
 
 .callback-container > div:first-child{
@@ -9,8 +11,9 @@
 }
 
 .callback-container img{
-    max-height: 350px;
+    max-height: 300px;
     margin-left: auto;
+    border-radius: 50px;
 }
 
 .callback-title {
@@ -69,7 +72,7 @@
     }
 
     .callback-container{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .form{
@@ -85,5 +88,10 @@
     .phone-input{
         font-size: 32px;
         text-align: center;
+    }
+
+    .callback-container>div:first-child {
+        width: 100%;
+        margin: 0px auto;
     }
 }
