@@ -2,7 +2,7 @@
     font-size: 38px;
     text-align: center;
     max-width: 900px;
-    margin: 0px auto;
+    margin: 0px auto 20px;
 }
 
 .station-title > span{
@@ -68,7 +68,7 @@
 }
 
 .station-btn{
-    margin: 20px auto 90px auto;
+    margin: 20px auto 40px auto;
     padding: 14px 70px;
 }
 

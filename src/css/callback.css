@@ -12,7 +12,8 @@
 
 .callback-container img{
     max-height: 300px;
-    margin-left: auto;
+    /* margin-left: auto; */
+    width: 100%;
     border-radius: 50px;
 }
 
@@ -94,4 +95,8 @@
         width: 100%;
         margin: 0px auto;
     }
+
+    .callback-container img{
+    max-height: 350px;
+}
 }
